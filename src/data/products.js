@@ -1,7 +1,7 @@
 export const products = [
     {
       id: 1,
-      name: "Calavera",
+      name: "skull",
       price: "¿$?",  // Solo símbolo sin número
       colors: ["white", "black", "cream"],
       mainImage: "https://i.pinimg.com/736x/9d/b5/84/9db5848040098c8fb5acef046c37cbb3.jpg",
