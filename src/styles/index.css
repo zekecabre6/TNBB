@@ -1,0 +1,560 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+    color: #ffffff;
+  }
+  
+  .app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .navbar {
+    background-color: #1e1e1e;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #ffffff;
+  }
+  
+  .home {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .home-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+  }
+  
+  .product-card {
+    background-color: #242424;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .product-image {
+    max-width: 100%;
+    max-height: 250px;
+    border-radius: 10px;
+  }
+  
+  .product-name {
+    margin: 1rem 0;
+    color: #ffffff;
+  }
+  
+  .product-price {
+    margin: 0.5rem 0;
+    color: #ffffff;
+  }
+  
+  .add-to-cart {
+    background-color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #008fbf;
+  }
+  
+  .footer {
+    background-color: #1e1e1e;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+  }
+  
+  .footer .heart {
+    color: red;
+  }
+  .product-detail {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .product-image-large {
+    max-width: 80%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .product-detail h1 {
+    font-size: 2rem;
+    color: #ffffff;
+  }
+  
+  .product-detail p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  .product-detail .add-to-cart {
+    background-color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .product-detail .add-to-cart:hover {
+    background-color: #008fbf;
+  }
+  .product-detail {
+    text-align: center;
+    padding: 2rem;
+    color: #fff;
+  }
+  
+  .product-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .product-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .main-image {
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  
+  .design-images {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .design-image {
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+  .design-image-rem{
+
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    max-height: 150px;
+  }
+  .design-image-rem:hover {
+    transform: scale(1.1);
+  }
+  .design-image:hover {
+    transform: scale(1.1);
+  }
+  
+  .product-colors {
+    margin: 1.5rem 0;
+  }
+  
+  .colors {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .color-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: capitalize;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .color-btn:hover {
+    background-color: #ffffff;
+    color: #000;
+  }
+  
+  .color-btn.white {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .color-btn.black {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .color-btn.cream {
+    background-color: #f5f5dc;
+    color: #000;
+  }
+  
+  .add-to-cart {
+    background-color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #008fbf;
+  }
+  .product-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .main-image, .design-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .design-images {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .color-btn {
+    padding: 10px;
+    margin: 5px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .color-btn:hover {
+    background-color: #555;
+  }
+  
+  .add-to-cart {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #555;
+  }
+  .product-card {
+    background-color: #222;  /* Fondo oscuro */
+    border: 1px solid #333;  /* Borde sutil */
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 8px;
+    color: white;
+    transition: transform 0.3s ease;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-10px);  /* Efecto hover */
+  }
+  
+  .product-card-img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;  /* Máximo tamaño para la imagen */
+    margin-bottom: 15px;
+    border-radius: 8px;
+  }
+  
+  .color-options {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .color-option {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #444;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .color-option.white {
+    background-color: white;
+    color: black;
+  }
+  
+  .color-option.black {
+    background-color: black;
+    color: white;
+  }
+  
+  .color-option.cream {
+    background-color: #f5f5dc;
+    color: black;
+  }
+  .design-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    border-radius: 8px;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  /* Estilos para el modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: #000; /* Fondo negro para el modal */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.modal-images {
+  margin: 20px 0;
+}
+
+.modal-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 5px;
+}
+
+.image-selector {
+  margin-top: 20px;
+}
+
+.image-selector-btn {
+  background-color: #444;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.image-selector-btn:hover {
+  background-color: #555;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #444;
+}
+/* Contenedor principal de los diseños */
+.mis-disenos-section {
+  text-align: center;
+}
+
+.designs-grid {
+  display: flex; /* Usamos flex para alinear los elementos en línea */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  gap: 20px; /* Espacio entre las tarjetas */
+  flex-wrap: wrap; /* Permite que las tarjetas se ajusten a nuevas líneas si el espacio no es suficiente */
+  margin-top: 20px;
+}
+
+.design-card {
+  background-color: #333; /* Fondo oscuro para las tarjetas */
+  color: white; /* Color del texto */
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px; /* Tamaño fijo para las tarjetas */
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease; /* Efecto al pasar el mouse */
+}
+
+.design-card:hover {
+  transform: scale(1.05); /* Hace que la tarjeta crezca ligeramente al pasar el mouse */
+}
+
+.design-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+h3 {
+  margin: 10px 0;
+}
+
+p {
+  font-size: 14px;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: #000; /* Fondo negro para el modal */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  text-align: center;
+}
+
+.modal-images {
+  margin: 20px 0;
+}
+
+.modal-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 5px;
+}
+
+.image-selector {
+  margin-top: 20px;
+}
+
+.image-selector-btn {
+  background-color: #444;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.image-selector-btn:hover {
+  background-color: #555;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #444;
+}
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1c1c1c;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.footer .heart {
+  color: red;
+}
+
+.footer .social-icons {
+  margin-top: 10px;
+}
+
+.footer .social-icons a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  transform: scale(1.2);
+  color: #ccc;
+}
+
+.footer .social-icon {
+  width: 24px;
+  height: 24px;
+}

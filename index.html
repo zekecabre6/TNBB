@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The New Black is Black</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="module">
+      let titles = [
+        "The New Black is Black", // Título inicial
+        "Proximamente..." // Título alternativo
+      ];
+      let titleIndex = 0;
+
+      // Cambiar el título cada 3 segundos
+      setInterval(() => {
+        titleIndex = (titleIndex + 1) % titles.length;
+        document.title = titles[titleIndex];
+      }, 3000);
+
+      // Cambiar el título cuando el usuario cambia de pestaña
+      document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+          document.title = "¡Vos te lo perdes!";
+        } else {
+          document.title = titles[titleIndex]; // Mantener el título actual
+        }
+      });
+    </script>
+    
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
