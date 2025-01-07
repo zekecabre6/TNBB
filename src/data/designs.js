@@ -2,8 +2,8 @@ export const designs = [{
   id: 4,
   name: "Design 4",
   images: [
-    "https://i.pinimg.com/736x/99/fb/cb/99fbcb641bd0aeb1d3ea6066c5cc46e4.jpg", // Blanco
-    "https://i.pinimg.com/736x/0b/c1/ca/0bc1cae60a3709d015fe1e75b7f031a7.jpg"  // Negro
+    "https://i.pinimg.com/736x/0b/c1/ca/0bc1cae60a3709d015fe1e75b7f031a7.jpg", // Blanco
+    "https://i.pinimg.com/736x/99/fb/cb/99fbcb641bd0aeb1d3ea6066c5cc46e4.jpg"  // Negro
   ],
   description: "La muerte acecha, con versiones en blanco y negro."
 },
