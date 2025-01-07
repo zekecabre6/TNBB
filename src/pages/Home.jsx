@@ -9,6 +9,7 @@ function Home() {
     <div className="home">
       <h2 className="home-title" id="shoppy">Discover the Darkness</h2>
       <p>Esto es Hecho a Mano</p>
+      <h3>Proximamente!</h3>
       <div className="product-grid">
         {products.map((product) => (
           <Link to={`/product/${product.id}`} key={product.id}>
