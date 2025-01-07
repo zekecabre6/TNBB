@@ -15,7 +15,7 @@ export const designs = [
       "https://i.pinimg.com/736x/4f/19/8d/4f198d7913bb75c44310bf874e98db39.jpg", // Blanco
       "https://i.pinimg.com/736x/63/3b/02/633b025b20de6a547374c0470dd8ecef.jpg"  // Negro
     ],
-    description: "Diseño elegante y moderno, con fondo negro."
+    description: "Diseño elegante y moderno."
   },
   {
     id: 3,
