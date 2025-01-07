@@ -1,4 +1,16 @@
 export const products = [
+  {
+    id: 1,
+    name: "Death",
+    price: "¿$?",  // Solo símbolo sin número
+    colors: ["white", "black", "cream"],
+    mainImage: "https://i.pinimg.com/736x/fc/6d/4d/fc6d4d31e9987c973483739f54ad45e5.jpg",
+    designImages: [
+      "https://i.pinimg.com/736x/fc/6d/4d/fc6d4d31e9987c973483739f54ad45e5.jpg",
+      "https://i.pinimg.com/736x/30/61/d5/3061d5b7c3df74a13ee061694a87934d.jpg",
+      "https://i.pinimg.com/736x/d9/51/4e/d9514e3756704ccd409576735fea7910.jpg",
+    ],
+  },
     {
       id: 1,
       name: "skull",

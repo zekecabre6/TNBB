@@ -1,4 +1,12 @@
-export const designs = [
+export const designs = [{
+  id: 4,
+  name: "Design 4",
+  images: [
+    "https://i.pinimg.com/736x/a1/57/05/a15705c91bde9a96e846eead71bb1f06.jpg", // Blanco
+    "https://i.pinimg.com/736x/0b/c1/ca/0bc1cae60a3709d015fe1e75b7f031a7.jpg"  // Negro
+  ],
+  description: "La muerte acecha, con versiones en blanco y negro."
+},
   {
     id: 1,
     name: "Design 1",
