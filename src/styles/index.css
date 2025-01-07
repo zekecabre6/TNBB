@@ -558,3 +558,135 @@ button:hover {
   width: 24px;
   height: 24px;
 }
+/* Estilos generales */
+.product-detail {
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+}
+
+.product-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Aseguramos que haya espacio entre los elementos */
+  gap: 20px;
+}
+
+.product-images {
+  flex: 1 1 100%; /* Por defecto, toma toda el ancho disponible */
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-image {
+  width: 100%;
+  max-width: 400px; /* Establecemos un límite máximo */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.design-images {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  justify-content: center; /* Aseguramos que las miniaturas estén centradas */
+}
+
+.design-image-rem {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.design-image-rem:hover {
+  transform: scale(1.1);
+}
+
+.product-info {
+  flex: 1 1 100%; /* Toma toda el ancho disponible por defecto */
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Media Queries para dispositivos pequeños */
+@media (max-width: 1024px) {
+  .product-title {
+    font-size: 1.8rem;
+  }
+
+  .main-image {
+    max-width: 90%;
+  }
+
+  .product-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-info {
+    margin-top: 20px;
+  }
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .product-title {
+    font-size: 1.6rem;
+  }
+
+  .product-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-images {
+    width: 100%; /* Hacemos que las imágenes ocupen todo el ancho */
+    margin-bottom: 20px;
+  }
+
+  .design-images {
+    justify-content: center;
+  }
+
+  .product-price {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-title {
+    font-size: 1.4rem;
+  }
+
+  .main-image {
+    max-width: 100%;
+  }
+
+  .design-image-rem {
+    width: 60px;
+    height: 60px;
+  }
+
+  .product-price {
+    font-size: 1.2rem;
+  }
+}

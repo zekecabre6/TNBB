@@ -5,8 +5,7 @@ import { products } from "../data/products";
 function ProductDetail() {
   const { id } = useParams();
   const product = products.find((p) => p.id === parseInt(id));
-  const [selectedColor, setSelectedColor] = useState(product.colors[0]);
-  const [selectedImage, setSelectedImage] = useState(product.mainImage); // Estado para la imagen seleccionada
+  const [selectedImage, setSelectedImage] = useState(product.mainImage);
 
   if (!product) {
     return <h2>Product not found</h2>;
@@ -15,41 +14,30 @@ function ProductDetail() {
   return (
     <div className="product-detail">
       <h1 className="product-title">{product.name}</h1>
-      <div className="product-images">
-        <img
-          src={selectedImage}
-          alt={`${product.name} main`}
-          className="main-image"
-        />
-        <div className="design-images">
-          {product.designImages.map((image, index) => (
-            <img
-              key={index}
-              src={image}
-              alt={`Design ${index + 1}`}
-              className="design-image-rem"
-              onClick={() => setSelectedImage(image)} // Cambiar la imagen principal al hacer clic
-            />
-          ))}
+      <div className="product-container">
+        <div className="product-images">
+          <img
+            src={selectedImage}
+            alt={`${product.name} main`}
+            className="main-image"
+          />
+          <div className="design-images">
+            {product.designImages.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`Design ${index + 1}`}
+                className="design-image-rem"
+                onClick={() => setSelectedImage(image)}
+              />
+            ))}
+          </div>
+        </div>
+        <div className="product-info">
+          <p className="product-price">{product.price}</p>
+          {/* Si necesitas más información del producto, puedes agregarla aquí */}
         </div>
       </div>
-      <p>{product.price}</p>
-      {/* <div className="product-colors">
-        <h3>Available Colors:</h3>
-        <div className="colors">
-          {product.colors.map((color, index) => (
-            <button
-              key={index}
-              className={`color-btn ${color}`}
-              onClick={() => setSelectedColor(color)}
-            >
-              {color}
-            </button>
-          ))}
-        </div>
-        <p>Selected Color: <strong>{selectedColor}</strong></p>
-      </div> */}
-      {/* <button className="add-to-cart">Add to Cart</button> */}
     </div>
   );
 }
