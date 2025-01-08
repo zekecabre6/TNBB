@@ -1,6 +1,18 @@
 export const products = [
   {
-    id: 1,
+    id: 5,
+    name: "skeletons",
+    price: "¿$?",  // Solo símbolo sin número
+    colors: ["white", "black","white/b", "cream/b"],
+    mainImage: "https://i.pinimg.com/736x/68/e8/3c/68e83cd7a976be2d10433d5b4cc21f82.jpg",
+    designImages: [
+      "https://i.pinimg.com/736x/68/e8/3c/68e83cd7a976be2d10433d5b4cc21f82.jpg",
+      "https://i.pinimg.com/736x/91/de/e5/91dee5a7e587b64b3a1a533b2847a1c2.jpg",
+      "https://i.pinimg.com/736x/00/a9/97/00a9974577dbd3e1b13adbcbe6005968.jpg",
+      "https://i.pinimg.com/736x/d5/9b/34/d59b342adb857e7f182a1b5152fca4bc.jpg",
+    ],
+  },{
+    id: 4,
     name: "Death",
     price: "¿$?",  // Solo símbolo sin número
     colors: ["white", "black", "cream"],

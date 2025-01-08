@@ -1,4 +1,13 @@
 export const designs = [{
+  id: 5,
+  name: "Design 5",
+  images: [
+    "https://i.pinimg.com/736x/c2/a0/86/c2a0863787fe53b50707ec509f98eebe.jpg", // Blanco
+    "https://i.pinimg.com/736x/17/13/76/1713760aa1c37b6a715cd4b4201c0055.jpg",  // Negro
+    "https://i.pinimg.com/736x/e3/ec/09/e3ec09e9803762a25124f363046d312b.jpg" //blue
+  ],
+  description: "La muerte acecha, con versiones en blanco y negro."
+},{
   id: 4,
   name: "Design 4",
   images: [

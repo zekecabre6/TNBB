@@ -1,34 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const ProductCard = ({ product }) => {
   const [selectedDesign, setSelectedDesign] = useState(product.designImages[0]);
-  const [designLabel, setDesignLabel] = useState("Blanco");
+  const [designLabel, setDesignLabel] = useState(product.colors[0]);
 
-  // Función para cambiar la imagen del diseño y su etiqueta cada 3 segundos
-  React.useEffect(() => {
+  // Cambiar la imagen del diseño cada 3 segundos
+  useEffect(() => {
     const interval = setInterval(() => {
       setSelectedDesign((prevDesign) => {
         const currentIndex = product.designImages.indexOf(prevDesign);
         const nextIndex = (currentIndex + 1) % product.designImages.length;
         return product.designImages[nextIndex];
       });
-    }, 3000); // Cambia la imagen cada 3 segundos
+    }, 3000);
 
-    // Limpiar el intervalo al desmontar el componente
-    return () => clearInterval(interval);
+    return () => clearInterval(interval); // Limpiar intervalo al desmontar
   }, [product.designImages]);
 
-  // Cambiar el label de la imagen de acuerdo al diseño seleccionado
-  React.useEffect(() => {
+  // Cambiar el label del diseño según la imagen seleccionada
+  useEffect(() => {
     const currentIndex = product.designImages.indexOf(selectedDesign);
-    if (currentIndex === 0) {
-      setDesignLabel("Blanco");
-    } else if (currentIndex === 1) {
-      setDesignLabel("Negro");
-    } else {
-      setDesignLabel("Crema");
-    }
-  }, [selectedDesign, product.designImages]);
+    setDesignLabel(product.colors[currentIndex] || "Unknown"); // Si no hay un color definido
+  }, [selectedDesign, product.designImages, product.colors]);
 
   return (
     <div className="product-card">
@@ -38,7 +31,7 @@ const ProductCard = ({ product }) => {
         alt={`Design for ${product.name}`}
         className="product-image"
       />
-      <p>¿{product.price}?</p>
+      <p>{product.price}</p>
       <p className="design-label">{designLabel}</p>
     </div>
   );
