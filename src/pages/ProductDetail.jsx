@@ -5,7 +5,7 @@ import { products } from "../data/products";
 function ProductDetail() {
   const { id } = useParams();
   const product = products.find((p) => p.id === parseInt(id));
-  const [selectedImage, setSelectedImage] = useState(product.mainImage);
+  const [selectedImage, setSelectedImage] = useState(product ? product.mainImage : '');
   const [zoomPosition, setZoomPosition] = useState({ x: 0, y: 0 });
   const [isZooming, setIsZooming] = useState(false);
 
