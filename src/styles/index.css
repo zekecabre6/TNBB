@@ -587,7 +587,7 @@ button:hover {
 
 .main-image {
   width: 100%;
-  max-width: 400px; /* Establecemos un límite máximo */
+  max-width: 100vw; /* Establecemos un límite máximo */
   height: auto;
   margin-bottom: 10px;
 }
@@ -713,3 +713,32 @@ button:hover {
 .design-image-rem:hover {
   transform: scale(1.1); /* Agranda la imagen ligeramente */
 }
+.image-zoom {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.zoom-active {
+  cursor: zoom-in;
+}
+
+.zoom-lens {
+  position: absolute;
+  top: 50%;
+  left: 25%; /* Centrado en la mitad izquierda */
+  width: 400px; /* Tamaño del área de zoom */
+  height: 400px;
+  pointer-events: none;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 500%; /* Ajusta el nivel de zoom */
+  transform: translate(-50%, -50%); /* Centrado respecto al punto left/top */
+}
+
