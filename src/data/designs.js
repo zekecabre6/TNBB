@@ -6,7 +6,7 @@ export const designs = [{
     "https://i.pinimg.com/736x/17/13/76/1713760aa1c37b6a715cd4b4201c0055.jpg",  // Negro
     "https://i.pinimg.com/736x/e3/ec/09/e3ec09e9803762a25124f363046d312b.jpg" //blue
   ],
-  description: "La muerte acecha, con versiones en blanco y negro."
+  description: "Skeletons, con versiones en blanco, negro y azul."
 },{
   id: 4,
   name: "Design 4",
